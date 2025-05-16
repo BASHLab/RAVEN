@@ -46,6 +46,7 @@ Coming Soon!
 | Model Name     | Modal Type |
 |:----------------|:------------:|
 | RAVEN-7B-AV| AV |
+| RAVEN-7B-AVS| AVS |
 
 ## 🤖 Inference
 - **STEP 1:** Download $\texttt{siglip-so400m-patch14-384}$ from here [google/siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) 
