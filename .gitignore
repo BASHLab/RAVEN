@@ -1,18 +1,61 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Python
+__pycache__
+*.pyc
+*.egg-info
+dist
 
-# Other files and folders
-.settings/
+# Log
+*.log
+*.log.*
+*.json
+*.jsonl
+log_dir*/
+temp*/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Data
+!**/alpaca-data-conversation.json
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Editor
+.idea
+*.swp
+
+# Other
+.DS_Store
+3rd_parties
+
+# jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# DevContainer
+!.devcontainer/*
+
+# Demo
+serve_images/
+temp/
+
+# data folder
+data/
+dataset/
+datasets/
+
+# training folder
+wandb
+ckpts*
+output
+output/
+checkpoints
+checkpoints/
+work_dirs*/
+venv/
+
+# evaluation folder
+/eval
+/eval*
+
+# pretrained weights
+pretrained/
+publish_models/
+public_models/
+
+*.out
