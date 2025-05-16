@@ -37,46 +37,22 @@ apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 ## 📁 **EVS-QA** Dataset
 Train and test split of **EVS-QA** is provided [here](./evs-qa-dataset/).<br>
-**EVS-QA** dataset follows this structure
-```json
-[
-    {
-        "file_name_root": <filename root>,
-        "source": <source> # EPIC-KITCHEN or EGO4D,
-        "conversation": [
-            {
-                "question": <question>,
-                "answer": <answer>,
-                "question_type": <question type>
-            }
-            ...
-        ]
-    }
-    ...
-]
-```
-To download corresponding 📷 video, 🎤 audio, and 📝 IMU:
-- [EPIC-KITCHEN](https://epic-kitchens.github.io/2025)
-- [EGO4D](https://ego4d-data.org/docs/start-here/)
-  - Natural Language Query
-  - Moments Query
-
-Download the data and arrange them in following format
-```bash
-RAVEN
-├── datasets
-│   ├── custom_sft
-│   |   ├── sensor
-│   |   ├── videos
-│   │   |   ├── EGO4D
-│   │   |   ├── EPIC-KITCHEN
-
-```
+More details [here](./evs-qa-dataset/README.md).
 
 ## 🗝️ Training & Evaluation
 Coming Soon!
 
+## 🍀 Model Zoo
+| Model Name     | Modal Type |
+|:----------------|:------------:|
+| RAVEN-7B-AV| AV |
+
 ## 🤖 Inference
+- **STEP 1:** Download $\texttt{siglip-so400m-patch14-384}$ from here [google/siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384) 
+- **STEP 2:** Download **RAVEN** checkpoint
+```bash
+CUDA_VISIBLE_DEVICES=0 python inference.py --model-path=<MODEL PATH> --modal-type=<MODAL TYPE>
+```
 
 ## 👍 Acknowledgement
 The codebase of RAVEN is adapted from [**VideoLLaMA2**](https://github.com/DAMO-NLP-SG/VideoLLaMA2). We are also grateful for their contribution.
