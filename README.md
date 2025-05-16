@@ -11,6 +11,13 @@
 <img src="./assets/raven_architecture.png" width="800" />
 
 ---
+## 🚀 Main Results
+##### Comparison of **RAVEN** and prior MLLMs on *exocentric* open-ended video QA (MSVD-QA, MSRVTT-QA, ActivityNet-QA) and audio-visual QA (AVSD, MUSIC-QA) benchmarks. Best and second-best scores are in $\textbf{Bold}$ and $\underline{\text{underline}}$. $^*$ indicates scores reproduced by us.
+<p><img src="./assets/main_result_exo.png" width="800"></p>
+
+##### Comparison of **RAVEN** with MLLMs on the EgoThink (Reasoning) and AVS-QA benchmarks. **RAVEN** outperforms across metrics and excels in reasoning. $\textbf{Bold}$ and $\underline{\text{underline}}$ indicate the best and second-best scores.
+<p><img src="./assets/main_result_ego.png" width="800"></p>
+
 ## 🛠️ Requirements and Installation
 Basic Dependencies:
 * Python >= 3.8
@@ -27,9 +34,49 @@ pip install opencv-python==4.5.5.64
 apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 ```
 ---
+
+## 📁 **EVS-QA** Dataset
+Train and test split of **EVS-QA** is provided [here](./evs-qa-dataset/).<br>
+**EVS-QA** dataset follows this structure
+```json
+[
+    {
+        "file_name_root": <filename root>,
+        "source": <source> # EPIC-KITCHEN or EGO4D,
+        "conversation": [
+            {
+                "question": <question>,
+                "answer": <answer>,
+                "question_type": <question type>
+            }
+            ...
+        ]
+    }
+    ...
+]
+```
+To download corresponding 📷 video, 🎤 audio, and 📝 IMU:
+- [EPIC-KITCHEN](https://epic-kitchens.github.io/2025)
+- [EGO4D](https://ego4d-data.org/docs/start-here/)
+  - Natural Language Query
+  - Moments Query
+
+Download the data and arrange them in following format
+```bash
+RAVEN
+├── datasets
+│   ├── custom_sft
+│   |   ├── sensor
+│   |   ├── videos
+│   │   |   ├── EGO4D
+│   │   |   ├── EPIC-KITCHEN
+
+```
+
+## 🗝️ Training & Evaluation
+Coming Soon!
+
+## 🤖 Inference
+
 ## 👍 Acknowledgement
-The codebase of RAVEN is adapted from [**VideoLLaMA2**](https://github.com/DAMO-NLP-SG/VideoLLaMA2) and [**FastChat**](https://github.com/lm-sys/FastChat). We are also grateful for the following projects our VideoLLaMA 2 arise from:
-* [**LLaMA 2**](https://github.com/meta-llama/llama), [**Mistral-7B**](https://mistral.ai/news/announcing-mistral-7b/), [**OpenAI CLIP**](https://openai.com/index/clip/), [**Honeybee**](https://github.com/kakaobrain/honeybee).
-* [**Video-ChatGPT**](https://github.com/mbzuai-oryx/Video-ChatGPT), [**Video-LLaVA**](https://github.com/PKU-YuanGroup/Video-LLaVA). 
-* [**WebVid**](https://github.com/m-bain/webvid), [**Panda-70M**](https://github.com/snap-research/Panda-70M), [**LanguageBind**](https://github.com/PKU-YuanGroup/LanguageBind), [**InternVid**](https://github.com/OpenGVLab/InternVideo/tree/main/Data/InternVid).
-* [**VideoChat2**](https://github.com/OpenGVLab/Ask-Anything/tree/main/video_chat2), [**Valley**](https://github.com/RupertLuo/Valley), [**VTimeLLM**](https://github.com/huangb23/VTimeLLM), [**ShareGPT4V**](https://sharegpt4v.github.io/).
+The codebase of RAVEN is adapted from [**VideoLLaMA2**](https://github.com/DAMO-NLP-SG/VideoLLaMA2). We are also grateful for their contribution.
