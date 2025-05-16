@@ -57,5 +57,7 @@ venv/
 pretrained/
 publish_models/
 public_models/
+RAVEN-7B-*/
+google/
 
 *.out
