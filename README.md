@@ -35,8 +35,8 @@ apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 ```
 ---
 
-## 📁 **EVS-QA** Dataset
-Train and test split of **EVS-QA** is provided [here](./avs-qa-dataset/).<br>
+## 📁 **AVS-QA** Dataset
+Train and test split of **AVS-QA** is provided [here](./avs-qa-dataset/).<br>
 More details [here](./avs-qa-dataset/README.md).
 
 ## 🗝️ Training & Evaluation
