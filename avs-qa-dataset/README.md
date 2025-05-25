@@ -1,6 +1,6 @@
 # Audio, Video, Sensor Question Answer (**AVS-QA**)
 
-**EVS-QA** dataset follows this structure
+**AVS-QA** dataset follows this structure
 ```json
 [
     {
