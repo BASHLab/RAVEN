@@ -3,11 +3,17 @@
 <p>
 
 <h3 align="center">
-    <a href="" style="color:#825987">
+    <a href="https://arxiv.org/pdf/2505.17114" style="color:#825987">
         RAVEN: Query-Guided Representation Alignment for Question
         Answering over Audio, Video, Embedded Sensors, and Natural Language
     </a>
 </h3>
+<h5 align="center">
+    Project Page:
+    <a href="https://bashlab.github.io/raven_project/" style="color:#825987">
+        https://bashlab.github.io/raven_project/
+    </a>
+</h5>
 <img src="./assets/raven_architecture.png" width="800" />
 
 ---
@@ -35,9 +41,9 @@ apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 ```
 ---
 
-## 📁 **EVS-QA** Dataset
-Train and test split of **EVS-QA** is provided [here](./evs-qa-dataset/).<br>
-More details [here](./evs-qa-dataset/README.md).
+## 📁 **AVS-QA** Dataset
+Train and test split of **AVS-QA** is provided [here](./avs-qa-dataset/).<br>
+More details [here](./avs-qa-dataset/README.md).
 
 ## 🗝️ Training & Evaluation
 Coming Soon!
