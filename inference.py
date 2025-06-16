@@ -8,6 +8,7 @@ def inference(args):
 
     model_path = args.model_path
     model, processor, tokenizer = model_init(model_path)
+    print(sum(p.numel() for p in model.parameters()))
 
     if args.modal_type == "a":
         model.model.vision_tower = None

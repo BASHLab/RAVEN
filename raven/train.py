@@ -665,8 +665,7 @@ def train(attn_implementation=None):
     print("\n\n\n")
     data_module = make_supervised_data_module(tokenizer=tokenizer, data_args=data_args)
     # select a Trainer
-    exit()
-    trainer = VideoLLaMA2Trainer(model=model, tokenizer=tokenizer, args=training_args, **data_module)
+    trainer = RAVENTrainer(model=model, tokenizer=tokenizer, args=training_args, **data_module)
     if list(pathlib.Path(training_args.output_dir).glob("checkpoint-*")):
         trainer.train(resume_from_checkpoint=True)
     else:
