@@ -51,7 +51,7 @@ Coming Soon!
 ## 🍀 Model Zoo
 | Model Name     | Modal Type |
 |:----------------|:------------:|
-| RAVEN-7B-AV| AV |
+| [RAVEN-7B-AV](https://huggingface.co/BASH-Lab/RAVEN-AV-7B)| AV |
 | RAVEN-7B-AVS| AVS |
 
 ## 🤖 Inference
