@@ -26,7 +26,7 @@ To download corresponding 📷 video, 🎤 audio, and 📝 IMU:
 
 Download the data and arrange them in following format
 
-Dataset: [BASH-Lab/AVS-QA](BASH-Lab/AVS-QA)
+Dataset: [BASH-Lab/AVS-QA](https://huggingface.co/datasets/BASH-Lab/AVS-QA)
 ```bash
 RAVEN
 ├── datasets
