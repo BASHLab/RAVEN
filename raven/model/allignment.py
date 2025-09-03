@@ -223,7 +223,7 @@ class AllingmentModule(nn.Module):
         self.ln = nn.LayerNorm(normalized_shape=mm_feat_dim)
         
         self.activation = nn.ReLU()
-        self.sigmoid = nn.Sigmoid()
+        self.softmax = nn.Softmax()
     
     def get_embed(self, new_input_embeds):
         text_embed = []
@@ -271,7 +271,7 @@ class AllingmentModule(nn.Module):
         x = self.ln(x)
         x = self.activation(x)
         x = self.fc2(x)
-        x = self.sigmoid(x)
+        x = self.softmax(x)
         new_input_embeds = self.weight_token(
             x, new_input_embeds, inference
         )
